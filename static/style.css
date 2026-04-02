@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f0f2f5;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.header {
+    background: #2c3e66;
+    color: white;
+    padding: 20px 30px;
+}
+.header h1 {
+    margin: 0 0 8px 0;
+}
+.header p {
+    margin: 0;
+    opacity: 0.8;
+}
+.controls {
+    padding: 20px 30px;
+    background: #f8f9fc;
+    border-bottom: 1px solid #e0e4e8;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.controls label {
+    font-weight: 600;
+    color: #1e2a3e;
+}
+select {
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #bdc3c7;
+    background: white;
+    cursor: pointer;
+}
+.info-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 30px;
+}
+.map-container {
+    flex: 2;
+    min-width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#map {
+    height: 500px;
+    width: 100%;
+}
+.data-container {
+    flex: 1.2;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+}
+.data-container h3 {
+    margin-top: 0;
+    color: #2c3e66;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 8px;
+}
+.total-info {
+    background: #eef2fa;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+th, td {
+    text-align: left;
+    padding: 10px 6px;
+    border-bottom: 1px solid #e9ecef;
+}
+th {
+    background: #f1f5f9;
+    font-weight: 600;
+}
+.percentage-bar {
+    background: #4c7a9a;
+    height: 6px;
+    border-radius: 3px;
+    margin-top: 4px;
+    width: 0%;
+    transition: width 0.3s;
+}
+.note {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 16px;
+    text-align: center;
+}
+footer {
+    background: #f8f9fc;
+    padding: 12px 30px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #6c757d;
+    border-top: 1px solid #e0e4e8;
+}
+@media (max-width: 800px) {
+    .info-panel { flex-direction: column; }
+}

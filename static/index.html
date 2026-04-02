@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Народы России – историческая карта</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🗺️ Народы России: исторический атлас</h1>
+        <p>Выберите год — увидите границы России (современная подложка) и демографические показатели</p>
+    </div>
+    <div class="controls">
+        <label for="yearSelect">📅 Год переписи / оценки:</label>
+        <select id="yearSelect">
+            <option value="">-- Загрузка --</option>
+        </select>
+        <span id="loadingHint" style="color:#4c7a9a;">Загрузите данные...</span>
+    </div>
+    <div class="info-panel">
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+        <div class="data-container">
+            <h3>📊 Население по народам</h3>
+            <div id="totalInfo" class="total-info">Выберите год</div>
+            <div style="overflow-x: auto;">
+                <table id="dataTable">
+                    <thead>
+                        <tr><th>Народ</th><th>Численность (млн)</th><th>Доля (%)</th></tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr><td colspan="3">Нет данных</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="note">
+                * Данные основаны на исторических переписях (1897, 1926, 1959, 1989, 2010)<br>
+                Карта показывает современные границы РФ.
+            </div>
+        </div>
+    </div>
+    <footer>
+        Проект «Народы России» – демонстрация динамики национального состава на фоне географической карты
+    </footer>
+</div>
+</body>
+</html>
