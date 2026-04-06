@@ -121,7 +121,6 @@ async function updateForYear(year) {
             <b>📅 ${year} год</b><br>
             👥 Население: ${totalPop.toFixed(1)} млн<br>
             🏆 Крупнейший народ: ${topPeople ? topPeople.name : '—'} (${topPeople ? topPeople.percentage.toFixed(1) : 0}%)
-            <br><small>📍 Маркер в центре России</small>
         `;
         setMarkerAndPopup(100, 64, popupHtml);
     } catch (err) {
