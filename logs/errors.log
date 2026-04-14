@@ -1,0 +1,2 @@
+2026-04-06 09:13:47.415 | ERROR    | main:get_years:61 - Ошибка получения списка годов: Query failed
+2026-04-06 10:27:21.943 | ERROR    | main:log_requests:49 - ❌ Ошибка при обработке GET /api/regions/geojson: name 'json' is not defined

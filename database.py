@@ -1,23 +1,27 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, Session
-from fastapi import Depends
+from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
+from sqlalchemy.orm import declarative_base
+from typing import AsyncGenerator
+from logger import logger
 
-# Замените на свои параметры подключения
-DATABASE_URL = "postgresql+psycopg2://postgres:123@localhost:5432/map_russia"
+DATABASE_URL = "postgresql+asyncpg://postgres:123@localhost:5432/map_russia"
 
-engine = create_engine(
+logger.info(f"Создание асинхронного движка PostgreSQL: {DATABASE_URL.split('@')[1]}")  # без пароля
+
+engine = create_async_engine(
     DATABASE_URL,
-    echo=True,  # для отладки, в продакшене выключить
-    pool_size=5,  # оптимизация пула соединений
+    echo=False,          # отключаем echo, чтобы не дублировать логи (loguru уже всё пишет)
+    pool_size=5,
     max_overflow=10
 )
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+AsyncSessionLocal = async_sessionmaker(
+    engine,
+    class_=AsyncSession,
+    expire_on_commit=False
+)
 
-# Dependency для получения сессии в эндпоинтах
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+Base = declarative_base()
+
+async def get_db() -> AsyncGenerator[AsyncSession, None]:
+    async with AsyncSessionLocal() as session:
+        yield session

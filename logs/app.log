@@ -1,0 +1,22 @@
+2026-04-14 08:48:42.407 | INFO     | database:<module>:8 - Создание асинхронного движка PostgreSQL: localhost:5432/map_russia
+2026-04-14 08:57:55.133 | INFO     | database:<module>:8 - Создание асинхронного движка PostgreSQL: localhost:5432/map_russia
+2026-04-14 08:58:20.308 | INFO     | database:<module>:8 - Создание асинхронного движка PostgreSQL: localhost:5432/map_russia
+2026-04-14 08:58:20.559 | INFO     | main:lifespan:26 - 🚀 Запуск FastAPI приложения
+2026-04-14 08:58:20.832 | INFO     | main:lifespan:29 - ✅ Инициализация завершена
+2026-04-14 08:58:22.223 | INFO     | main:log_requests:42 - ➡️  GET / - начат
+2026-04-14 08:58:22.277 | INFO     | main:log_requests:46 - ⬅️  GET / - завершён за 0.054s, статус 200
+2026-04-14 08:58:23.515 | INFO     | main:log_requests:42 - ➡️  GET /api/years - начат
+2026-04-14 08:58:23.542 | INFO     | main:get_years:66 - Успешно получено 8 годов
+2026-04-14 08:58:23.542 | INFO     | main:log_requests:46 - ⬅️  GET /api/years - завершён за 0.027s, статус 200
+2026-04-14 08:58:23.561 | INFO     | main:log_requests:42 - ➡️  GET /api/regions/geojson - начат
+2026-04-14 08:58:24.429 | INFO     | main:log_requests:42 - ➡️  GET /favicon.ico - начат
+2026-04-14 08:58:24.430 | INFO     | main:log_requests:46 - ⬅️  GET /favicon.ico - завершён за 0.001s, статус 404
+2026-04-14 08:58:46.126 | INFO     | main:log_requests:46 - ⬅️  GET /api/regions/geojson - завершён за 22.564s, статус 200
+2026-04-14 08:58:46.127 | INFO     | main:log_requests:42 - ➡️  GET /api/data/1897 - начат
+2026-04-14 08:58:46.258 | INFO     | main:log_requests:46 - ⬅️  GET /api/data/1897 - завершён за 0.131s, статус 200
+2026-04-14 08:58:46.280 | INFO     | main:log_requests:42 - ➡️  GET /api/regions/ethnicity - начат
+2026-04-14 08:58:46.292 | INFO     | main:log_requests:46 - ⬅️  GET /api/regions/ethnicity - завершён за 0.012s, статус 200
+2026-04-14 08:58:53.281 | INFO     | main:lifespan:32 - 🛑 Остановка FastAPI приложения
+2026-04-14 08:58:53.325 | INFO     | main:lifespan:34 - Соединения с БД закрыты
+2026-04-14 06:02:30.501 | INFO     | database:<module>:8 - Создание асинхронного движка PostgreSQL: localhost:5432/map_russia
+2026-04-14 06:05:56.404 | INFO     | database:<module>:8 - Создание асинхронного движка PostgreSQL: localhost:5432/map_russia
